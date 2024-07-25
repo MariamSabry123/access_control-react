@@ -22,6 +22,7 @@ interface AccessControlEntry {
       image: string;
     };
     userMobileNumber: string;
+    username:string;
   };
 }
 
@@ -94,11 +95,11 @@ const Details: React.FC = () => {
           </Tr>
           <Tr>
             <Td>Consumer Name</Td>
-            <Td>{entry.agentId.username}</Td>
+            <Td>{entry.consumerId.username}</Td>
           </Tr>
           <Tr>
             <Td>Agent Name</Td>
-            <Td>{entry.agentId.organizationName}</Td>
+            <Td>{entry.agentId.username}</Td>
           </Tr>
           <Tr>
             <Td>Consumer Mobile</Td>
@@ -117,10 +118,10 @@ const Details: React.FC = () => {
             <Td>Location</Td>
             <Td><Link href={entry.consumerId.userNationalID.image} isExternal>View Map</Link></Td>
           </Tr>
-          <Tr>
+          {/* <Tr>
             <Td>Consumer NID</Td>
             <Td><Image src={entry.consumerId.userNationalID.image} alt="Consumer NID" /></Td>
-          </Tr>
+          </Tr> */}
           <Tr>
             <Td>Email</Td>
             <Td>{entry.agentId.userEmail}</Td>
