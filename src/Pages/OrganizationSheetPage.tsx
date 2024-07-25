@@ -249,7 +249,7 @@ const OrganizationSheetPage = () => {
                   <Th>Name</Th>
                   <Th>Email</Th>
                   <Th>Phone Number</Th>
-                  <Th>Role</Th>
+                  <Th>organization</Th>
                   <Th>Actions</Th>
                 </Tr>
               </Thead>

@@ -8,6 +8,7 @@ interface AccessControlEntry {
   agentId: {
     _id: string;
     organizationName: string;
+    username: string; 
   };
   consumerId: {
     _id: string;
@@ -66,7 +67,7 @@ const SummaryReport: React.FC = () => {
                 <Td>{entry._id}</Td>
                 <Td>{new Date(entry.scanedAt).toLocaleDateString()}</Td>
                 <Td>{new Date(entry.scanedAt).toLocaleTimeString()}</Td>
-                <Td>{entry.consumerId.organizationName}</Td>
+                <Td>{entry.agentId.username}</Td>
                 <Td>{entry.agentId.organizationName}</Td>
                 <Td>
                   <Button onClick={() => handleDetailsClick(entry._id)}>Details</Button>

@@ -13,6 +13,7 @@ interface AccessControlEntry {
     };
     userMobileNumber: string;
     userEmail: string;
+    username: string; 
   };
   consumerId: {
     organizationName: string;
@@ -93,18 +94,19 @@ const Details: React.FC = () => {
           </Tr>
           <Tr>
             <Td>Consumer Name</Td>
-            <Td>{entry.consumerId.organizationName}</Td>
+            <Td>{entry.agentId.username}</Td>
+          </Tr>
+          <Tr>
+            <Td>Agent Name</Td>
+            <Td>{entry.agentId.organizationName}</Td>
           </Tr>
           <Tr>
             <Td>Consumer Mobile</Td>
             <Td>{entry.consumerId.userMobileNumber}</Td>
           </Tr>
+          
           <Tr>
-            <Td>Agent</Td>
-            <Td>{entry.agentId.organizationName}</Td>
-          </Tr>
-          <Tr>
-            <Td>Agent Name</Td>
+            <Td>NID</Td>
             <Td>{entry.agentId.userNationalID.nationalID}</Td>
           </Tr>
           <Tr>
@@ -120,7 +122,7 @@ const Details: React.FC = () => {
             <Td><Image src={entry.consumerId.userNationalID.image} alt="Consumer NID" /></Td>
           </Tr>
           <Tr>
-            <Td>Details</Td>
+            <Td>Email</Td>
             <Td>{entry.agentId.userEmail}</Td>
           </Tr>
         </Tbody>
